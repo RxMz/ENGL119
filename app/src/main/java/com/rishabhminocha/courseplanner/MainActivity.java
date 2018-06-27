@@ -35,12 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void showFileChooser() {
         Intent intent = new Intent();
-        //sets the select file to all types of files
-        intent.setType("*/*");
-        //allows to select data and return it
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        //starts new activity to select file and return data
-        startActivityForResult(Intent.createChooser(intent,"Choose File to Upload.."), 1);
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 1);
 
     }
 
@@ -69,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == Activity.RESULT_OK){
-            if(requestCode == 7){
+            if(requestCode == 1){
                 if(data == null){
                     //no data present
                     return;
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent i1 = new Intent(MainActivity.this, UploadTranscript.class);
                         startActivity(i1);
                     }
-                }, 3000); // delay
+                }, 5000); // delay
 
             }
         }
