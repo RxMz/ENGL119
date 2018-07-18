@@ -23,7 +23,7 @@ public class UploadTranscript extends AppCompatActivity{
         futureCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(UploadTranscript.this);
                 builder1.setMessage("Are you sure you would like to add a course?");
                 builder1.setCancelable(true);
 
