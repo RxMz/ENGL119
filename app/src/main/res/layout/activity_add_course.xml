@@ -9,14 +9,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fefefe"
+        android:textSize="28sp"
         android:gravity="center"
         android:text="Add a course"/>
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter the subject"
+            android:layout_gravity="center"
+            android:textColor="#fefefe"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter the course code"
+            android:layout_gravity="center"
+            android:textColor="#fefefe"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter the number of credits"
+            android:layout_gravity="center"
+            android:textColor="#fefefe"
+            />
     </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -25,9 +54,9 @@
         android:textColor="#0ac2f8"
         android:layout_centerVertical="true"
         android:textSize="18sp"
-        android:id="@+id/Login"
+        android:id="@+id/update"
         android:gravity="center"
-        android:text="Already have an account? Login"
+        android:text="Update my plan"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
